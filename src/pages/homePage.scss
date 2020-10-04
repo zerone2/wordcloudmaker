@@ -1,0 +1,32 @@
+.homePage {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0;
+  width: 100%;
+  text-align: center;
+
+  img {
+    width: 700px;
+  }
+  a {
+    font-size: 20px;
+    text-decoration: none;
+  }
+  textarea {
+    margin-top: 30px;
+    width: 500px;
+    height: 250px;
+  }
+  button {
+    margin-top: 30px;
+    background: #4e7cc4;
+    border: 0.5px solid #4e7cc4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+}
