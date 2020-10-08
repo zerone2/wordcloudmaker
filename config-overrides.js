@@ -11,7 +11,7 @@ const cssLoaderOptions = {
       }
       const match = context.resourcePath.match(/src(.*)/)
       if (match && match[1]) {
-        const antdProPath = match[1].replace('.less', '')
+        const antdProPath = match[1].replace('.scss', '')
         const arr = antdProPath.split('/').map((a) => a.toLowerCase())
         arr.pop()
         return `boiler-${arr.join('-')}-${localName}`.replace(/-components/g, '').replace(/--/g, '-')
