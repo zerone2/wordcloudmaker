@@ -18,15 +18,26 @@
     margin-top: 30px;
     width: 500px;
     height: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    padding: 8px;
+    &:focus {
+      outline-offset: 0;
+      outline: none;
+    }
   }
   button {
     margin-top: 30px;
     background: #4e7cc4;
     border: 0.5px solid #4e7cc4;
-    padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
+    &:last-child {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 }

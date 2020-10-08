@@ -1,0 +1,29 @@
+.wordcloud-controller {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  & > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+
+    p {
+      margin: 0 10px 0 0;
+    }
+  }
+  &__maxWords {
+    p {
+      margin: 0 17px 0 0 !important;
+    }
+    em {
+      margin-left: 10px;
+      font-size: 12px;
+      color: red;
+    }
+  }
+}
