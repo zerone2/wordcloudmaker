@@ -57,9 +57,13 @@ const HomePage = observer(() => {
       <h1>Word Cloud :)</h1>
       <Wordcloud words={words} options={wordcloudOptions}/>
       <Controllers />
-      <textarea value={textAreaWords} onChange={changeText} placeholder={'분석하려는 텍스트를 넣어주세요'}/>
-      <Button onClick={() => makeWordcloud()}>GENERATE !</Button>
-      <Button onClick={() => download()} type={'primary'}>Download PNG !</Button>
+      <div className={'textarea-container'}>
+        <textarea value={textAreaWords} onChange={changeText} placeholder={'분석하려는 텍스트를 넣어주세요'}/>
+        <div className={'button-container'}>
+          <Button onClick={() => makeWordcloud()}>GENERATE !</Button>
+          <Button onClick={() => download()} type={'primary'}>Download PNG !</Button>
+        </div>
+      </div>
     </div>
   )
 })
