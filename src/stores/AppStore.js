@@ -8,7 +8,8 @@ export default class AppStore {
     height: 300,
     minFont: 12,
     maxFont: 24,
-    spiral: 'archimedean'
+    spiral: 'archimedean',
+    fontFamily: 'Arial'
   }
   @observable cloudRef
   
