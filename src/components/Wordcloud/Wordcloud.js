@@ -6,7 +6,7 @@ import './wordcloud.scss'
 
 const Wordcloud = React.memo(observer((props) => {
   const { words, options } = props
-  const { width, height, maxWords, minFont, maxFont, spiral } = options
+  const { width, height, maxWords, minFont, maxFont, spiral, fontFamily } = options
   const { appStore: { setCloudRef }} = useStores()
   
   const getCallback = callbackName => (word, event) => {
@@ -29,7 +29,8 @@ const Wordcloud = React.memo(observer((props) => {
           rotations: 3,
           rotationAngles: [0, 90],
           fontSizes: [minFont, maxFont],
-          spiral: spiral
+          spiral: spiral,
+          fontFamily: fontFamily
         }}
         callbacks={{
           onWordClick: getCallback('onWordClick'),

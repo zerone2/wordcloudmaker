@@ -10,6 +10,7 @@ import { useStores } from 'src/stores'
 import { getFrequency } from 'src/utils/getFrequency'
 import Wordcloud from 'src/components/Wordcloud/Wordcloud'
 import Controllers from 'src/components/Wordcloud/Controllers'
+import logo from 'assets/images/logo.png'
 import './homePage.scss'
 
 const HomePage = observer(() => {
@@ -54,7 +55,7 @@ const HomePage = observer(() => {
 
   return (
     <div className={'homePage'}>
-      <h1>Word Cloud :)</h1>
+      <img className={'logo'} src={logo} alt={'logo'} />
       <Wordcloud words={words} options={wordcloudOptions}/>
       <Controllers />
       <div className={'textarea-container'}>
