@@ -27,6 +27,7 @@ const StyledSlider = styled(Slider)`
 `
 
 const StyledSelect = styled(Select)`
+  width: 176px;
   .ant-select-selector {
     height: 36px !important;
     
@@ -78,25 +79,49 @@ const Controllers = observer(() => {
             onChange={(value) => changeOptions('height', value)}
           />
         </div>
-      </div>
-      <div className={'wordcloud-controller__row'}>
-        <div className={'wordcloud-controller__row-spiral'}>
+         <div className={'wordcloud-controller__row-spiral'}>
           <p>모양</p>
           <StyledSelect defaultValue={'archimedean'} onChange={value => changeOptions('spiral', value)} style={{height: 36, width: 150, textAlign: 'left'}}>
             <Select.Option value={'archimedean'}>아르키메데스형</Select.Option>
             <Select.Option value={'rectangular'}>직사각형</Select.Option>
           </StyledSelect>
         </div>
+      </div>
+      <div className={'wordcloud-controller__row'}>
         <div className={'wordcloud-controller__row-maxWords'}>
           <p>최대 글자수</p>
           <Input placeholder="30" value={maxWords} onChange={(e) => {changeOptions('maxWords', e.target.value)}} style={{width: 80, border: '2px solid #cccccc'}}/>
           <em>(200개 이상으로 입력하시면<br/>활성화가 어려울 수 있습니다. )</em>
         </div>
-        <div className={'wordcloud-controller__row-font'}>
+        <div className={'wordcloud-controller__row-fontSize'}>
           <p>최소 글자크기</p>
           <Input placeholder="10" value={minFont} suffix={'px'} onChange={(e) => {changeOptions('minFont', e.target.value)}} style={{width: 100, marginRight: 20, border: '2px solid #cccccc'}}/>
           <p>최대 글자크기</p>
           <Input placeholder="30" value={maxFont} suffix={'px'} onChange={(e) => {changeOptions('maxFont', e.target.value)}} style={{width: 100, border: '2px solid #cccccc'}}/>
+        </div>
+        <div className={'wordcloud-controller__row-fontFamily'}>
+          <p>폰트</p>
+          <StyledSelect defaultValue={'Arial'} onChange={value => changeOptions('fontFamily', value)} style={{height: 36, width: 150, textAlign: 'left'}}>
+            <Select.Option value={'Arial'}>Arial</Select.Option>
+            <Select.Option value={'Times New Roman'}>Times New Roman</Select.Option>
+            <Select.Option value={'Helvetica'}>Helvetica</Select.Option>
+            <Select.Option value={'Times'}>Times</Select.Option>
+            <Select.Option value={'Courier New'}>Courier New</Select.Option>
+            <Select.Option value={'Verdana'}>Verdana</Select.Option>
+            <Select.Option value={'Courier'}>Courier</Select.Option>
+            <Select.Option value={'Arial Narrow'}>Arial Narrow</Select.Option>
+            <Select.Option value={'Candara'}>Candara</Select.Option>
+            <Select.Option value={'Geneva'}>Geneva</Select.Option>
+            <Select.Option value={'Calibri'}>Calibri</Select.Option>
+            <Select.Option value={'Cambria'}>Cambria</Select.Option>
+            <Select.Option value={'Garamond'}>Garamond</Select.Option>
+            <Select.Option value={'Perpetua'}>Perpetua</Select.Option>
+            <Select.Option value={'Monaco'}>Monaco</Select.Option>
+            <Select.Option value={'Didot'}>Didot</Select.Option>
+            <Select.Option value={'Brush Script MT'}>Brush Script MT</Select.Option>
+            <Select.Option value={'Lucida Bright'}>Lucida Bright</Select.Option>
+            <Select.Option value={'Copperplate'}>Copperplate</Select.Option>
+          </StyledSelect>
         </div>
       </div>
     </div>
